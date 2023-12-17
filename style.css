@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-bg: hsl(217, 54%, 11%); /*(main BG)*/
+    --very-dark-blue-card: hsl(216, 50%, 16%); /*(card BG)*/
+    --very-dark-blue-line: hsl(215, 32%, 27%); /*line*/
+    --white: hsl(0, 0%, 100%);
+
+}
+
+body {
+    background: var(--very-dark-blue-bg);
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--white);
+}
+
+.container {
+    background: var(--very-dark-blue-card);
+    padding: 1.5rem;
+    border-radius: 20px;
+    max-width: 350px;
+}
+
+.container .image {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.container .image #net-picture {
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.container .image .image-overlay {
+    z-index: 1;
+    background: hsl(178, 100%, 50%, 50%);
+    position: absolute;
+    top: 0;
+    height: 99%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 15px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.container .image .image-overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;;
+    transform: translate(-50%, -50%);
+}
+
+.container .image-overlay:hover {
+    opacity: 1;
+}
+
+.container .card-title {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.container .card-title:hover {
+    color: var(--cyan);
+}
+
+.container .card-description {
+    color: var(--soft-blue);
+    margin-bottom: 1.5rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.details .net {
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+}
+
+.details .net img {
+    padding-right: 8px;
+}
+
+.details .days {
+    display: flex;
+    align-items: center;
+    color: var(--soft-blue);
+}
+
+.details .days img {
+    padding-right: 5px;
+}
+
+.container hr {
+    border: none;
+    background-color: var(--very-dark-blue-line);
+    height: 1px;
+    margin-bottom: 1rem;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.creator #profile-pic {
+    margin-right: 1rem;
+    height: 30px;
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.creator p span {
+    color: var(--soft-blue)
+}
+
+.creator p #creator-name {
+    color: var(--white);
+}
+.creator p #creator-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
